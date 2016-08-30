@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+</head>
+<body ng-app="mainApp">
+	<div ng-controller="people">
+		<ul>
+			<h2>Names and Age of Programmers in the local area: </h2>
+			<li ng-repeat="person in persons | filter:globalSearch">
+				{{ "Name: " + person.Name + '| Age: ' + person.Age +'| Fav color: '+ person.Fav_color }}
+			</li>
+		</ul>
+	</div>
+	<div id="searchBoxes">
+		Global Search Filter: <input type="text" ng-model="globalSearch.$"><br>
+		Name Search Filter:<input type="text" ng-model="globalSearch.Name"><br>
+		Age Search Filter:<input type="text" ng-model="globalSearch.Age"><br>
+		Color Search Filter:<input type="text" ng-model="globalSearch.Fav_color"><br>
+	</div>
+</body>
+</html>

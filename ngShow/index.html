@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>AJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script type="text/javascript" src="controller.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+	</head>
+	<body ng-app="mainApp" ng-controller="app">
+		<button ng-click="toggle()">Toggle Message</button>
+		<div class="message" ng-show="show == 'msg1'">This is my message1</div>
+		<div class="message" ng-show="show == 'msg2'">This is my message2</div>
+	</body>
+</html>

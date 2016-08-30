@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>AJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script type="text/javascript" src="controller.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+
+		<style type="text/css">
+			span.done-true {
+				color: gray;
+				font-style: italic;
+				text-decoration: line-through;
+			}
+			span[contenteditable="true"] {
+				background: gray;
+				padding: 3px;
+			}
+		</style>
+
+	</head>
+	<body ng-app="mainApp" ng-controller="app">
+		<h1 style="text-align:center;">Add a Task</h1>
+		<input ng-model="task" ng-keyup="searchEnter()" type="text" style="display:block;margin:0 auto;padding:5px;font-size:15px;width:300px">
+
+		<div id="tasksToShow">
+			<ul>
+				<li ng-repeat="oneTask in tasks  | orderBy: 'taskStatus' track by $index">
+					<input type="checkbox" ng-model="oneTask.taskStatus" ng-click="updateLocalStorage()">
+					<span contenteditable = 'false' ng-dblclick="contentEdit(oneTask.taskMessage)" ng-keydown="enterAgain(oneTask.taskMessage)" ng-model="oneTask.taskMessage" class="done-{{ oneTask.taskStatus }}">
+					{{  oneTask.taskMessage }}
+					</span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

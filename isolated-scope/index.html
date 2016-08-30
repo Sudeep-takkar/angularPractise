@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>AJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script type="text/javascript" src="controller.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+	</head>
+	<body ng-app="mainApp" ng-controller="app">
+		<p>First variable 'name': {{ name }}</p>
+		<p>Second Variable 'age': {{ age }}</p>
+		<input type="button" value="From Controller" ng-click="alertTheName()">
+
+		<p>----------------DIRECTIVE---------------</p>
+		<div my-first-directive name="{{name}}" age="age" func="alertTheName()"></div>
+	</body>
+</html>

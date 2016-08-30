@@ -1,0 +1,29 @@
+{
+	"records": [
+		{
+			"Name" : "Sudeep",
+			"Age" : "18",
+			"Fav_color": "orange"
+		},
+		{
+			"Name" : "Sumit",
+			"Age" : "26",
+			"Fav_color": "green"
+		},
+		{
+			"Name" : "Aman",
+			"Age" : "23",
+			"Fav_color": "red"
+		},
+		{
+			"Name" : "neha",
+			"Age" : "23",
+			"Fav_color": "white"
+		},
+				{
+			"Name" : "Anonymous",
+			"Age" : "????",
+			"Fav_color": "white"
+		}
+	]
+}
